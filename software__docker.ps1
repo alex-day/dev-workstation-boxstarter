@@ -15,6 +15,7 @@ Import-Module Hyper-V
 $ethernetAdapter = Get-NetAdapter -Name wi-fi;
 New-VMSwitch -Name externalSwitch -NetAdapterName $ethernet.Name -AllowManagementOS $true -Notes ‘Parent OS, VMs, LAN’
 
-choco install docker docker-machine docker-compose
-install-module post-docker
-choco install docker-for-windows --ignore-checksums
+# Install docker for windows manually
+# choco install docker docker-machine docker-compose
+# install-module post-docker
+# choco install docker-for-windows --ignore-checksums
